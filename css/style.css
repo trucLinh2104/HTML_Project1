@@ -42,7 +42,7 @@ a{
 }
 /*Header*/
 .header{
-  height: 100vh;
+  height: 75vh;
   background-color: #E6F0FF;
   position: relative;
 }
@@ -103,7 +103,7 @@ a{
 .hero .title{
   margin-top:8px;
   color: #000336;
-  font-size: 6.4rem;
+  font-size: 5.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.18; /* 118.75% */
@@ -155,12 +155,71 @@ a{
   justify-content: space-between;
 }
 
-.clients .images img{
+.clients .images > img{
   width: 154px;
   height: 33px;
   opacity: 0.9;
+  transition: transform 0.3s ease;
 }
 
+.images {
+  position: relative;
+  display: inline-block;
+}
+
+.images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.images .image-wrapper {
+  position: absolute;
+  display: none;
+  content: "";
+  width: 204px;
+  height: 91px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  pointer-events: none; /* Đảm bảo hộp không gây cản trở sự kiện */
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+.images img:hover {
+  transform: scale(1.05); /* Phóng to ảnh khi hover */
+  cursor: pointer;
+}
+
+
+/*.images {*/
+/*  position: relative; !* Cần thiết để tạo khung xung quanh *!*/
+/*  display: inline-block; !* Đảm bảo ảnh và khung hoạt động tốt cùng nhau *!*/
+
+/*}*/
+
+/*.wrapper{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  transition: opacity 0.3s ease;*/
+/*}*/
+
+/*.images img:hover{*/
+/*  transform: scale(1.05);*/
+/*}*/
+/*.images  .wrapper:hover{*/
+/*   !* Tăng nhẹ kích thước ảnh khi hover *!*/
+/*  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+/*  width: 204px;*/
+/*  height: 91px;*/
+
+
+/*}*/
 /*Guides*/
 .guides{
   margin-top: 40px;
@@ -493,6 +552,8 @@ a{
 
 .footer .row li{
   list-style-type: none;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .footer .row .title{
@@ -514,4 +575,29 @@ a{
 
 .footer .row:first-child{
   margin-bottom: 82px;
-}.
+}
+
+.footer .row .social{
+  display: flex;
+  flex-wrap: nowrap;
+  gap:35px;
+  margin-top: 30px;
+}
+
+.footer .social > img{
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  position: relative;
+}
+/*.footer .social > img::before{*/
+/*  content: "";*/
+/*  display: inline-block;*/
+/*  position: absolute;*/
+/*  background: #5A6473;*/
+/*  width: 30px;*/
+/*  height: 30px;*/
+/*  top:0px;*/
+/*  left: 0px;*/
+
+/*}*/
