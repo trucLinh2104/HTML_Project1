@@ -426,3 +426,92 @@ a{
   left: 0;
   top: 0;
 }
+
+
+.subscrise .content{
+  border-radius: 20px;
+  padding-top:40px;
+  height: 409px;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscrise .text .title{
+  color: #FFF;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+
+.subscrise .text .desc{
+  color: #FFF;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.87;
+}
+
+.subscrise .text .btn{
+  border-radius: 12px;
+  width: 20%;
+  background: #FFF;
+  color: #002366;
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.subscrise .text{
+  height: 100%;
+  flex-direction: column;
+  border-radius: 20px;
+  background: #063183;
+  display: flex;
+  justify-content: center;
+  padding:0px 20px;
+  gap:20px;
+}
+.subscrise .phone{
+  position: absolute;
+  width: 218.083px;
+  height: 438.437px;
+  top: -15px;
+  right: 220px;
+}
+.footer{
+  margin-top: 50px;
+  padding:50px 0px;
+}
+.footer .row{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.footer .row li{
+  list-style-type: none;
+}
+
+.footer .row .title{
+  color: #1C1C1D;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+
+.footer .row .desc, .footer .row .list{
+  color: #7A7A7E;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+
+.footer .row:first-child{
+  margin-bottom: 82px;
+}.
