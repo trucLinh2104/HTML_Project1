@@ -7,6 +7,9 @@
 html{
   font-size: 62.5%;
 }
+html,body{
+  scroll-behavior: smooth;
+}
 
 body{
   font-size: 1.6rem;
@@ -43,6 +46,7 @@ a{
 /*Header*/
 .header{
   height: 75vh;
+  display: block;
   background-color: #E6F0FF;
   position: relative;
 }
@@ -52,47 +56,80 @@ a{
 .navbar{
   display: flex;
   align-items: center;
-  padding-top:38px;
+  position: fixed;
+  z-index: 99;
+  height: 100px;
+  width: 100%;
+  top:0;
+  left: 0;
+  justify-content: center;
+  background-color: var(--primary-color);
+
 }
 
 .navbar ul{
   display: flex;
 }
+.navbar .icon{
+  width: 8%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .navbar ul li{
   padding: 0 14px;
   margin-left: 50px;
+  transform: scale(1.2);  /* Phóng to phần tử */
+  font-size: 18px; /* Phóng to chữ */
 }
 
 .navbar ul li a{
   font-size: 1.4rem;
-  color:#4F5361;
+  font-weight: 600;
+  color: #edeeef;
 }
+.navbar ul li:hover{
+  transform: scale(1.5);  /* Phóng to phần tử */
 
+}
 .navbar action{
   margin-left: auto;
 }
 
-.navbar .action-link{
-  color:var(--primary-color);
+a.action-link {
+  color: aliceblue;
 }
 
 .navbar action .signUp-btn{
   padding: 13px 16px;
   margin-left: 20px;
   border-radius: 8px;
+  margin-right: 5px;
+  color: var(--primary-color);
+  background: white;
 }
 .navbar action .signUp-btn:hover{
   opacity: 0.6;
 }
 
 .hero{
-  margin-top: 130px;
   width: 51%;
 }
-
+.hero-wrap{
+  padding-top: 100px;
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+}
 .hero .sub-title{
-  color: #687690;
+  color: #bdc6d3;
+  padding-top:50px;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 500;
@@ -181,7 +218,7 @@ a{
   content: "";
   width: 204px;
   height: 91px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
   pointer-events: none; /* Đảm bảo hộp không gây cản trở sự kiện */
   transition: opacity 0.3s ease;
@@ -590,14 +627,18 @@ a{
   border-radius: 2px;
   position: relative;
 }
-/*.footer .social > img::before{*/
-/*  content: "";*/
-/*  display: inline-block;*/
-/*  position: absolute;*/
-/*  background: #5A6473;*/
-/*  width: 30px;*/
-/*  height: 30px;*/
-/*  top:0px;*/
-/*  left: 0px;*/
 
-/*}*/
+
+.footer .social .wrap{
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  transition: background-color ease 0.2s;
+}
+.footer .social .wrap:hover {
+  background-color: #eaeaea;
+}
