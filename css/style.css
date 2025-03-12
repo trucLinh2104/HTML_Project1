@@ -45,7 +45,7 @@ a{
 }
 /*Header*/
 .header{
-  height: 75vh;
+  height: 100vh;
   display: block;
   background-color: #E6F0FF;
   position: relative;
@@ -514,6 +514,7 @@ a.action-link {
   display: inline-block;
   width: 239px;
   height: 252px;
+  padding: 45px 22px 0;
   position: absolute;
   border-radius: 0px 0px 12px 12px;
   background: #FFF;
@@ -521,6 +522,57 @@ a.action-link {
   z-index: 999;
   left: 0;
   top: 0;
+}
+
+.small .row{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small .row .value{
+  color: #000339;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1; /* 100% */
+  letter-spacing: 0.26px;
+}
+
+.small .row .arrow-trend{
+  width:25px;
+  height: 16px;
+}
+
+.small .content-desc{
+  color: #A7A7A7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  text-align: left;
+  margin-top: 8px;
+}
+
+.small .separate{
+  margin-top: 25px;
+  width: 193.62px;
+  height: 1.2px;
+  background: #E9E9E9;}
+
+.avatar-group img{
+  width: 18px;
+  height: 18px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 50%;
+  margin-left: -10px;
+}
+.avatar-block{
+margin-left: 10px;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:16px;
 }
 
 
